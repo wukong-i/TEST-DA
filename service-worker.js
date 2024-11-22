@@ -4,10 +4,9 @@ self.addEventListener('install', (event) => {
       return cache.addAll([
         '/',
         '/index.html',
-        '/icon-192x192.png',
-        '/icon-512x512.png',
-        '/styles.css', // Add your CSS and other files
-        '/script.js'
+        '/src/styles/main.css', // Add your CSS and other files
+        '/src/js/carousel.js',
+        '/src/js/navigation.js'
       ]);
     })
   );
