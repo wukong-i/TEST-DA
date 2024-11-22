@@ -2,7 +2,7 @@
   "name": "Learning Platform",
   "short_name": "Learn",
   "description": "A modern learning platform",
-  "start_url": "index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4f46e5",
