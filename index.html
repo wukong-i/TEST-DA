@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnHub - Modern Learning Platform</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-brand">MedOracle</a>
+      
+      <div class="nav-links">
+        <a href="/" class="nav-link active">
+          <span class="material-symbols-outlined">home</span>
+          <span>Home</span>
+        </a>
+        <a href="/lectures.html" class="nav-link">
+          <span class="material-symbols-outlined">school</span>
+          <span>Lectures</span>
+        </a>
+        <a href="/notes.html" class="nav-link">
+          <span class="material-symbols-outlined">note</span>
+          <span>Notes</span>
+        </a>
+      </div>
+
+      <div class="search-container">
+        <input type="search" class="search-bar" placeholder="Search...">
+      </div>
+
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <span class="material-symbols-outlined">dark_mode</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="carousel">
+      <div class="carousel-slide">
+        <img src="https://global.discourse-cdn.com/freecodecamp/original/4X/4/0/8/40878c11c66531de6c07743f839b7b950bcc7137.jpeg" alt="Education">
+      </div>
+      <div class="carousel-slide">
+        <img src="https://global.discourse-cdn.com/freecodecamp/original/4X/4/0/8/40878c11c66531de6c07743f839b7b950bcc7137.jpeg" alt="Learning">
+      </div>
+      <div class="carousel-slide">
+        <img src="https://global.discourse-cdn.com/freecodecamp/original/4X/4/0/8/40878c11c66531de6c07743f839b7b950bcc7137.jpeg" alt="Study">
+      </div>
+      <div class="carousel-slide">
+        <img src="https://cdn3-imgix.macpaw.com/images/content/macOS-UploadToGooglePhotos-1216_1616760678.png?auto=format&fm=png&ixlib=php-3.3.1&q=60&w=608" alt="Books">
+      </div>
+      <div class="carousel-slide">
+        <img src="https://cdn3-imgix.macpaw.com/images/content/macOS-UploadToGooglePhotos-1216_1616760678.png?auto=format&fm=png&ixlib=php-3.3.1&q=60&w=608" alt="Library">
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h2>Latest Lectures</h2>
+        <p>Explore our newest educational content and stay up to date with the latest topics.</p>
+        <a href="/lectures.html" class="nav-link">View Lectures</a>
+      </div>
+      
+      <div class="card">
+        <h2>Study Notes</h2>
+        <p>Access comprehensive study materials and notes to enhance your learning experience.</p>
+        <a href="/notes.html" class="nav-link">View Notes</a>
+      </div>
+      
+      <div class="card">
+        <h2>Community</h2>
+        <p>Join our learning community and connect with fellow students and educators.</p>
+        <a href="#" class="nav-link">Join Now</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span>LearnHub</span>
+      </div>
+      
+      <div class="footer-links">
+        <a href="/about.html" class="footer-link">About</a>
+        <a href="/contact.html" class="footer-link">Contact</a>
+        <a href="/privacy.html" class="footer-link">Privacy</a>
+        <a href="/terms.html" class="footer-link">Terms</a>
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; 2024 LearnHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/src/js/navigation.js"></script>
+  <script src="/src/js/carousel.js"></script>
+</body>
+</html>

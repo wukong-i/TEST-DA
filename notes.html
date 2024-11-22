@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnHub - Notes</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-brand">LearnHub</a>
+      
+      <div class="nav-links">
+        <a href="/" class="nav-link">
+          <span class="material-symbols-outlined">home</span>
+          <span>Home</span>
+        </a>
+        <a href="/lectures.html" class="nav-link">
+          <span class="material-symbols-outlined">school</span>
+          <span>Lectures</span>
+        </a>
+        <a href="/notes.html" class="nav-link active">
+          <span class="material-symbols-outlined">note</span>
+          <span>Notes</span>
+        </a>
+      </div>
+
+      <div class="search-container">
+        <input type="search" class="search-bar" placeholder="Search notes...">
+      </div>
+
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <span class="material-symbols-outlined">dark_mode</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Study Notes</h1>
+    
+    <div class="card-grid">
+      <div class="card">
+        <h2>Programming Fundamentals</h2>
+        <p>Essential concepts and principles of programming.</p>
+        <span class="text-sm text-gray-500">Last updated: March 20, 2024</span>
+      </div>
+      
+      <div class="card">
+        <h2>Web Development Guide</h2>
+        <p>Comprehensive guide to modern web development.</p>
+        <span class="text-sm text-gray-500">Last updated: March 19, 2024</span>
+      </div>
+      
+      <div class="card">
+        <h2>Algorithm Analysis</h2>
+        <p>Understanding time and space complexity.</p>
+        <span class="text-sm text-gray-500">Last updated: March 18, 2024</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span>LearnHub</span>
+      </div>
+      
+      <div class="footer-links">
+        <a href="/about.html" class="footer-link">About</a>
+        <a href="/contact.html" class="footer-link">Contact</a>
+        <a href="/privacy.html" class="footer-link">Privacy</a>
+        <a href="/terms.html" class="footer-link">Terms</a>
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; 2024 LearnHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/src/js/navigation.js"></script>
+</body>
+</html>
