@@ -2,111 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LearnHub - Modern Learning Platform</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
-  <link rel="stylesheet" href="src/styles/main.css">
-  <link rel="manifest" href="/manifest.json">
+  <title>Medoracle</title>
+  <link rel="icon" type="image/x-icon" href="/assests/main.jpg">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <a href="/" class="nav-brand">MedOracle</a>
-      
-      <div class="nav-links">
-        <a href="/" class="nav-link active">
-          <span class="material-symbols-outlined">home</span>
-          <span>Home</span>
-        </a>
-        <a href="/lectures.html" class="nav-link">
-          <span class="material-symbols-outlined">school</span>
-          <span>Lectures</span>
-        </a>
-        <a href="/notes.html" class="nav-link">
-          <span class="material-symbols-outlined">note</span>
-          <span>Notes</span>
-        </a>
-      </div>
+  <!-- Mobile Top Bar -->
+  <div class="mobile-top-bar">
+    <button id="menuBtn" class="menu-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+    </button>
+    <span><h1>Medoracle</h1></span>
+    <button id="searchBtn" class="search-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    </button>
+  </div>
 
-      <div class="search-container">
-        <input type="search" class="search-bar" placeholder="Search...">
-      </div>
-
-      <button class="theme-toggle" onclick="toggleTheme()">
-        <span class="material-symbols-outlined">dark_mode</span>
-      </button>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="menu-items">
+      <a href="/socials/au.html" class="menu-item">About</a>
+      <a href="/socials/cu.html" class="menu-item">Contact Us</a>
+      <a href="/socials/don.html" class="menu-item">Donations</a>
+      <a href="/socials/tos.html" class="menu-item">Terms of Service</a>
+      <a href="/socials/pp.html" class="menu-item">Privacy Policy</a>
     </div>
+  </div>
+
+  <!-- Mobile Search Overlay -->
+  <div id="searchOverlay" class="search-overlay hidden">
+    <input type="search" placeholder="Search..." class="search-input">
+  </div>
+
+  <!-- Desktop Navbar -->
+   
+  <nav class="desktop-nav">
+    
+    <div class="nav-links">
+      
+      <a href="index.html" class="nav-link active">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Home
+      </a>
+      <a href="lectures.html" class="nav-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        Lectures
+      </a>
+      <a href="notes.html" class="nav-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Notes
+      </a>
+    </div>
+    <div class="nav-search">
+      <input type="search" placeholder="Search..." class="search-input">
+    </div>
+    <button class="theme-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
   </nav>
 
-  <main class="container">
-    <div class="carousel">
-      <div class="carousel-slide">
-        <img src="https://global.discourse-cdn.com/freecodecamp/original/4X/4/0/8/40878c11c66531de6c07743f839b7b950bcc7137.jpeg" alt="Education">
-      </div>
-      <div class="carousel-slide">
-        <img src="https://global.discourse-cdn.com/freecodecamp/original/4X/4/0/8/40878c11c66531de6c07743f839b7b950bcc7137.jpeg" alt="Learning">
-      </div>
-      <div class="carousel-slide">
-        <img src="https://global.discourse-cdn.com/freecodecamp/original/4X/4/0/8/40878c11c66531de6c07743f839b7b950bcc7137.jpeg" alt="Study">
-      </div>
-      <div class="carousel-slide">
-        <img src="https://cdn3-imgix.macpaw.com/images/content/macOS-UploadToGooglePhotos-1216_1616760678.png?auto=format&fm=png&ixlib=php-3.3.1&q=60&w=608" alt="Books">
-      </div>
-      <div class="carousel-slide">
-        <img src="https://cdn3-imgix.macpaw.com/images/content/macOS-UploadToGooglePhotos-1216_1616760678.png?auto=format&fm=png&ixlib=php-3.3.1&q=60&w=608" alt="Library">
-      </div>
-    </div>
+  <!-- Mobile Bottom Bar -->
+  <nav class="mobile-nav">
+    <a href="index.html" class="nav-link active">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="lectures.html" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+      <span>Lectures</span>
+    </a>
+    <a href="notes.html" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <span>Notes</span>
+    </a>
+    <button class="theme-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </nav>
 
-    <div class="card-grid">
-      <div class="card">
-        <h2>Latest Lectures</h2>
-        <p>Explore our newest educational content and stay up to date with the latest topics.</p>
-        <a href="/lectures.html" class="nav-link">View Lectures</a>
-      </div>
-      
-      <div class="card">
-        <h2>Study Notes</h2>
-        <p>Access comprehensive study materials and notes to enhance your learning experience.</p>
-        <a href="/notes.html" class="nav-link">View Notes</a>
-      </div>
-      
-      <div class="card">
-        <h2>Community</h2>
-        <p>Join our learning community and connect with fellow students and educators.</p>
-        <a href="#" class="nav-link">Join Now</a>
-      </div>
+  <!-- Main Content -->
+  <main class="content">
+    <h1>Welcome</h1>
+    <div class="card">
+      <h2>Start Learning</h2>
+      <p>Access your lectures and notes with ease. Our platform provides a seamless learning experience.</p>
     </div>
+    
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-brand">
-        <span>LearnHub</span>
-      </div>
-      
-      <div class="footer-links">
-        <a href="/about.html" class="footer-link">About</a>
-        <a href="/contact.html" class="footer-link">Contact</a>
-        <a href="/privacy.html" class="footer-link">Privacy</a>
-        <a href="/terms.html" class="footer-link">Terms</a>
-      </div>
-
-      <div class="footer-copyright">
-        <p>&copy; 2024 LearnHub. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/src/js/navigation.js"></script>
-  <script src="/src/js/carousel.js"></script>
-  <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(() => console.log('Service Worker Registered'))
-      .catch((error) => console.error('Service Worker Error:', error));
-  }
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
