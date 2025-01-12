@@ -3,84 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LearnHub - Lectures</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
-  <link rel="stylesheet" href="/src/styles/main.css">
-  <link rel="manifest" href="/manifest.json">
+  <title>Lectures - Learning Platform</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <a href="/" class="nav-brand">LearnHub</a>
-      
-      <div class="nav-links">
-        <a href="/" class="nav-link">
-          <span class="material-symbols-outlined">home</span>
-          <span>Home</span>
-        </a>
-        <a href="/lectures.html" class="nav-link active">
-          <span class="material-symbols-outlined">school</span>
-          <span>Lectures</span>
-        </a>
-        <a href="/notes.html" class="nav-link">
-          <span class="material-symbols-outlined">note</span>
-          <span>Notes</span>
-        </a>
-      </div>
+  <<<!-- Mobile Top Bar -->
+  <div class="mobile-top-bar">
+    <button id="menuBtn" class="menu-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+    </button>
+    <button id="searchBtn" class="search-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    </button>
+  </div>
 
-      <div class="search-container">
-        <input type="search" class="search-bar" placeholder="Search lectures...">
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="menu-items">
+        <a href="#" class="menu-item">About Us</a>
+        <a href="#" class="menu-item">Contact Us</a>
+        <a href="#" class="menu-item">Terms of Service</a>
+        <a href="#" class="menu-item">Donations</a>
+        <a href="#" class="menu-item">Privacy Policy</a>
       </div>
-
-      <button class="theme-toggle" onclick="toggleTheme()">
-        <span class="material-symbols-outlined">dark_mode</span>
-      </button>
     </div>
+
+  <!-- Mobile Search Overlay -->
+  <div id="searchOverlay" class="search-overlay hidden">
+    <input type="search" placeholder="Search..." class="search-input">
+  </div>
+
+  <!-- Desktop Navbar -->
+  <nav class="desktop-nav">
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Home
+      </a>
+      <a href="lectures.html" class="nav-link active">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        Lectures
+      </a>
+      <a href="notes.html" class="nav-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Notes
+      </a>
+    </div>
+    <div class="nav-search">
+      <input type="search" placeholder="Search..." class="search-input">
+    </div>
+    <button id="themeToggle" class="theme-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
   </nav>
 
-  <main class="container">
-    <h1>Available Lectures</h1>
-    
-    <div class="card-grid">
-      <div class="card">
-        <h2>Introduction to Programming</h2>
-        <p>Learn the basics of programming and computer science fundamentals.</p>
-        <span class="text-sm text-gray-500">Duration: 2 hours</span>
-      </div>
-      
-      <div class="card">
-        <h2>Web Development Basics</h2>
-        <p>Understanding HTML, CSS, and JavaScript fundamentals.</p>
-        <span class="text-sm text-gray-500">Duration: 3 hours</span>
-      </div>
-      
-      <div class="card">
-        <h2>Data Structures</h2>
-        <p>Explore common data structures and their implementations.</p>
-        <span class="text-sm text-gray-500">Duration: 4 hours</span>
-      </div>
-    </div>
+  <!-- Mobile Bottom Bar -->
+  <nav class="mobile-nav">
+    <a href="index.html" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="lectures.html" class="nav-link active">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+      <span>Lectures</span>
+    </a>
+    <a href="notes.html" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <span>Notes</span>
+    </a>
+    <button class="theme-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="content">
+  <h1>Lectures</h1>
+    <!-- Carousel Container -->
+<div class="carousel-container">
+  <div class="carousel-card">
+    <img src="/assests/main.jpg" alt="Image 1" class="carousel-image">
+    <div class="carousel-caption">AnatoMY</div>
+  </div>
+  <div class="carousel-card">
+    <img src="/assests/download.jpg" alt="Image 2" class="carousel-image">
+    <div class="carousel-caption">MARROW</div>
+  </div>
+  <div class="carousel-card">
+    <img src="/assests/main.jpg" alt="Image 3" class="carousel-image">
+    <div class="carousel-caption">Caption 3</div>
+  </div>
+  <div class="carousel-card">
+    <img src="/assests/main.jpg" alt="Image 4" class="carousel-image">
+    <div class="carousel-caption">Caption 4</div>
+  </div>
+  <div class="carousel-card">
+    <img src="/assests/marrow.jpg" alt="Image 4" class="carousel-image">
+    <div class="carousel-caption">Caption 4</div>
+  </div>
+  <div class="carousel-card">
+    <img src="/assests/main.jpg" alt="Image 4" class="carousel-image">
+    <div class="carousel-caption">Caption 4</div>
+  </div>
+  <!-- Add more carousel cards as needed -->
+</div>
+
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-brand">
-        <span>LearnHub</span>
-      </div>
-      
-      <div class="footer-links">
-        <a href="/about.html" class="footer-link">About</a>
-        <a href="/contact.html" class="footer-link">Contact</a>
-        <a href="/privacy.html" class="footer-link">Privacy</a>
-        <a href="/terms.html" class="footer-link">Terms</a>
-      </div>
-
-      <div class="footer-copyright">
-        <p>&copy; 2024 LearnHub. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/src/js/navigation.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
